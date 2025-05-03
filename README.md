@@ -87,6 +87,35 @@ To prevent the bot from sleeping due to Render's free plan limitations, use Upti
 4. Enter your public Render URL (e.g., https://discord-meme-bot.onrender.com/).
 5. Name it (e.g., Discord Meme Bot) and click Create Monitor.
 
+### Hosting on Replit 
+You can also run this bot using Replit:
+
+1. Import the project to Replit.
+2. Add your DISCORD_BOT_TOKEN in Secrets (Environment Variables).
+3. Add a keep_alive.py file:
+   ```bash
+   from flask import Flask
+   from threading import Thread
+
+   app = Flask('')
+
+   @app.route('/')
+   def home():
+       return "Bot is running!"
+   
+   def run():
+       app.run(host='0.0.0.0', port=8080)
+   
+   def keep_alive():
+       t = Thread(target=run)
+       t.start()
+4. In your bot.py, add:
+   ```bash
+   from keep_alive import keep_alive
+   keep_alive()
+5. Run the project and use the Replit URL with UptimeRobot.
+
+   
 ### Contributing
 If you'd like to contribute to this project, feel free to fork it, make changes, and submit pull requests. All contributions are welcome!
 
