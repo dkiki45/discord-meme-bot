@@ -1,3 +1,5 @@
+![Imagem de Capa](https://github.com/dkiki45/discord-meme-bot/blob/main/caminho/para/sua/imagem.png?raw=true)
+
 # Discord Meme Bot
 
 A simple and fun Discord bot that fetches and shares memes from the internet. The bot utilizes the [Meme API](https://github.com/D3vd/Meme_Api) to retrieve memes and send them to a Discord channel when prompted by the `!meme` command.
