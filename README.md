@@ -77,15 +77,7 @@ In the Build Command field, enter:
 4. Add the Discord Bot Token:
 Add the DISCORD_BOT_TOKEN environment variable in Render’s dashboard (Settings > Environment Variables).
 5. Deploy: Click "Deploy" and your bot will be live!
-
-### Keeping the Bot Online 24/7 (Free Plan)
-To prevent the bot from sleeping due to Render's free plan limitations, use UptimeRobot:
-
-1. Create an account on uptimerobot.com.
-2. Click on Add New Monitor.
-3. Choose monitor type: HTTP(s).
-4. Enter your public Render URL (e.g., https://discord-meme-bot.onrender.com/).
-5. Name it (e.g., Discord Meme Bot) and click Create Monitor.
+6. When deploying the bot on Render, you do not need the additional code used on Replit (keep_alive.py and add this on bot.py).
 
 ### Hosting on Replit 
 You can also run this bot using Replit:
@@ -115,7 +107,29 @@ You can also run this bot using Replit:
    keep_alive()
 5. Run the project and use the Replit URL with UptimeRobot.
 
-   
+### Keeping the Bot Online 24/7 (Free Plan)
+To prevent the bot from sleeping due to Render's free plan limitations, use UptimeRobot:
+
+1. Create an account on uptimerobot.com.
+2. Click on Add New Monitor.
+3. Choose monitor type: HTTP(s).
+4. Enter your public Render URL (e.g., https://discord-meme-bot.onrender.com/).
+5. Name it (e.g., Discord Meme Bot) and click Create Monitor.
+
+### **Render + UptimeRobot Observations**
+1. Free Plan Limitations: On the free plan, Render services sleep after 15 minutes of inactivity, which can cause downtime for the bot. This needs to be managed with external services like UptimeRobot to keep the bot awake.
+2. Internet Connection and Latency Issues: While using services like Render and UptimeRobot, the location of the server can influence the performance of your bot. For example, if you're based in Brazil, the server's geographical location may cause latency issues or connection drops due to the distance from the server's data center. 
+ 
+### **Replit + UptimeRobot Observations**
+1. Replit Free Plan Limitations: Replit’s free plan has resource limits and may stop your bot if inactive or if the tab is closed, causing downtime.
+2. UptimeRobot: While it helps keep the bot active by pinging the URL, it doesn’t solve Replit's inactivity issue. The bot may still stop after some time.
+3. No 24/7 Guarantee: UptimeRobot helps, but Replit’s free plan still causes potential downtime after inactivity.
+4. Keep-Alive Script: A Flask-based keep-alive script helps, but Replit’s free tier may still stop the bot due to inactivity.
+5. Best for Small Projects: Replit + UptimeRobot works well for small bots or personal projects, but for larger bots, paid hosting services are recommended for consistent uptime.
+
+### Final Considerations
+While free services like Replit and Render can work for hosting your Discord Meme Bot, they come with limitations like downtime and resource constraints. For more reliable performance, especially in regions with internet instability, upgrading to paid plans is recommended. Paid services offer better stability, faster speeds, and additional features, ensuring smoother and uninterrupted bot performance.
+
 ### Contributing
 If you'd like to contribute to this project, feel free to fork it, make changes, and submit pull requests. All contributions are welcome!
 
@@ -124,8 +138,6 @@ If you'd like to contribute to this project, feel free to fork it, make changes,
 - Meme fetching logic adapted from [Original Meme API Example Repo](https://github.com/D3vd/Meme_Api)
 - Inspired by a meme bot idea shared by **Hong Jeon** on [Codedex](https://www.codedex.io/projects/build-a-discord-bot-with-python)
 
-### License
-This project is licensed under the MIT License.
 
 
 
