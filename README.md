@@ -1,4 +1,4 @@
-![Imagem de Capa](https://github.com/dkiki45/discord-meme-bot/blob/main/caminho/para/sua/imagem.png?raw=true)
+![Imagem de Capa](https://github.com/dkiki45/discord-meme-bot/blob/main/[https://github.com/dkiki45/discord-meme-bot/blob/main/imggit%20(1).jpg?raw=true].png?raw=true)
 
 # Discord Meme Bot
 
